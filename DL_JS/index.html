@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inscription étudiant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Formulaire d'inscription étudiant</h1>
+    <form id="formEtudiant" onsubmit="return validerFormulaire(this)" oncopy="return false" onpaste="return false">
+        <div class="form-field">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+
+        <div class="form-field">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom">
+        </div>
+
+        <div class="form-field">
+            <label for="dateNaissance">Date de naissance :</label>
+            <input type="date" id="dateNaissance" name="dateNaissance">
+        </div>
+
+        <div class="form-field">
+            <label for="filiere">Filière :</label>
+            <input type="text" id="filiere" name="filiere">
+        </div>
+
+        <div class="form-field">
+            <label for="email">E-mail :</label>
+            <input class="success" type="email" id="email" name="email" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="tel">
+        </div>
+
+        <div name="divNote" class="form-field single-line">
+            <label for="note1">Note :</label>
+            <input type="number" name="note" id="note1" min="0" max="20">
+            <button type="button" id="ajouterNote">+</button>
+        </div>
+
+        <div id="divMoyenne" class="form-field single-line">
+            <label for="moyenne">Moyenne :</label>
+            <input type="number" id="moyenne" name="moyenne" disabled>
+        </div>
+
+        <div class="form-field single-line">
+            <input type="submit" value="Calculer la moyenne">
+        </div>
+    </form>
+
+
+    <!-- Table -->
+    <table id="tableEtudiants">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date de naissance</th>
+                <th>Filière</th>
+                <th>E-mail</th>
+                <th>Téléphone</th>
+                <th>Notes</th>
+                <th>Moyenne</th>
+                <th>Action</th> <!-- Nouvelle colonne Action -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Smith</td>
+                <td>John</td>
+                <td>1995-08-23</td>
+                <td>Informatique</td>
+                <td>john.smith@example.com</td>
+                <td>0633442212</td>
+                <td>[13, 16, 8]</td>
+                <td>12.3</td>
+                <td>
+                    <button class="modifier">Modifier</button> <!-- Bouton Modifier -->
+                    <button class="supprimer">Supprimer</button> <!-- Bouton Supprimer -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
